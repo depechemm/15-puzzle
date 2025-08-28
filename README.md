@@ -24,6 +24,6 @@
 
 | PG-13 режим | NC-17 режим |
 |------------|-------------|
-| ![Режим PG-13](gameScreenshots/PG-13-mode.PNG) | ![Режим NC-17](gameScreenshots/NC-17-mode.PNG) |
+| ![Режим PG-13](gameScreenshots/PG-13-mode.png) | ![Режим NC-17](gameScreenshots/NC-17-mode.png) |
 
 
