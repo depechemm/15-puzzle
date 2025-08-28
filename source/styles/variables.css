@@ -1,0 +1,40 @@
+:root {
+  --game-table-size: 4;
+
+  --pink-base: rgba(236, 205, 239, 1);
+  --pink-light: rgba(254, 243, 255, 1);
+  --pink-medium: rgba(222, 179, 226, 1);
+  --pink-dark: rgba(86, 44, 89, 1);
+
+  --blue-base: rgb(49, 56, 85);
+  --blue-light: rgba(190, 197, 227, 1);
+  --blue-medium: rgb(36, 43, 70);
+  --blue-dark: rgba(12, 17, 37, 1);
+
+  --background-color: var(--pink-base);
+  --text-color: var(--pink-dark);
+  --icons-color: var(--pink-dark);
+  --icons-color-no-active: var(--pink-base);
+  --border-color: var(--pink-dark);
+  --icons-background-color: var(--pink-base);
+  --accent-text-color: var(--pink-light);
+  --text-color-additional: var(--pink-dark);
+  --element-background-color-light: var(--pink-light);
+  --element-background-color-medium: var(--pink-medium);
+  --element-background-color-dark: var(--pink-dark);
+  --background-figures-color: var(--pink-light);
+
+  --border-radius: 20px;
+}
+
+@media (max-width: 500px) {
+  :root {
+  --border-radius: 15px;
+}
+}
+
+@media (max-height: 500px) {
+  :root {
+  --border-radius: 15px;
+}
+}

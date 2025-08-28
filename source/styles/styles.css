@@ -1,0 +1,101 @@
+@import url(./variables.css);
+@import url(./components/burgerMenu.css);
+@import url(./components/modeSwitcher.css);
+@import url(./components/backgroundFigure.css);
+@import url(./components/game.css);
+@import url(./components/gameTable.css);
+@import url(./animation.css);
+@import url(./components/modal.css);
+
+@font-face {
+  font-family: "Minecraft";
+  src: url(../fonts/Minecraft_1.1.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  display: flex;
+  height: 100dvh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  font-family: "Minecraft", "Courier New", Courier, monospace;
+  color: var(--text-color);
+
+}
+
+main {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.dark-theme {
+  --background-color: var(--blue-base);
+  --text-color: var(--blue-light);
+  --icons-color: var(--blue-light);
+  --icons-color-no-active: var(--blue-base);
+  --border-color: var(--blue-dark);
+  --icons-background-color: var(--blue-base);
+  --accent-text-color: var(--blue-light);
+  --text-color-additional: var(--blue-dark);
+  --element-background-color-light: var(--blue-light);
+  --element-background-color-medium: var(--blue-medium);
+  --element-background-color-dark: var(--blue-dark);
+  --background-figures-color: var(--blue-medium);
+}
+
+.hide {
+  display: none;
+}
+
+.reload {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.reload path {
+  fill: var(--icons-color);
+}
+
+@media (max-height: 750px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 600px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-height: 520px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+
+

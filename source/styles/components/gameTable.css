@@ -1,0 +1,118 @@
+.game-table {
+  background-color: var(--element-background-color-light);
+  display: grid;
+  grid-template-columns: repeat(var(--game-table-size), min(calc(60vh / var(--game-table-size)), calc(70vw / var(--game-table-size))));
+  grid-template-rows: repeat(var(--game-table-size), min(calc(60vh / var(--game-table-size)), calc(70vw / var(--game-table-size))));
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  padding: 10px;
+}
+
+.game-table__puzzle {
+  position: relative;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--border-color);
+}
+
+#final-puzzle {
+  border: none;
+}
+
+#final-puzzle img {
+  border-radius: var(--border-radius);
+  border: 2px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+.full-image {
+  position: relative;
+  border-radius: calc(var(--border-radius) - 2px);
+  height: 100%;
+  width: 100%;
+  animation: fade 0.8s ease-in-out;
+}
+
+.last-puzzle {
+  animation: fade 0.8s ease-in-out;
+}
+
+.puzzle__number {
+  position: absolute;
+  color: var(--text-color-additional);
+  z-index: 1;
+  margin: 0;
+  font-size: 2rem;
+  right: 10%;
+  bottom: 10%;
+ text-shadow:
+    -2px -2px 0 var(--element-background-color-light),
+     2px -2px 0 var(--element-background-color-light),
+    -2px  2px 0 var(--element-background-color-light),
+     2px  2px 0 var(--element-background-color-light);
+}
+
+
+.puzzle__image {
+  border-radius: calc(var(--border-radius) - 2px);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  filter: blur(0px);
+  transition: filter 0.8s ease-in-out;
+}
+
+.game-table__puzzle {
+  overflow: hidden;
+}
+
+.puzzle__image.invalid {
+  filter: blur(12px);
+}
+
+.puzzle__button {
+  border-radius: var(--border-radius);
+  border: 2px solid var(--border-color);
+  background-color: var(--element-background-color-medium);
+  color: var(--text-color);
+  position: absolute;
+  z-index: 1;
+  margin: 1.5rem;
+  padding: 5px;
+  font-size: 1.5rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.puzzle__button:hover,
+.puzzle__button:focus-visible {
+  background-color: var(--element-background-color-dark);
+  color: var(--accent-text-color);
+  border-color: var(--accent-text-color);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+    border-color 0.5s ease-in-out;
+}
+
+.left-move {
+  animation: left-move 0.4s ease-in-out;
+}
+
+.right-move {
+  animation: right-move 0.4s ease-in-out;
+}
+
+.top-move {
+  animation: top-move 0.4s ease-in-out;
+}
+
+.bottom-move {
+  animation: bottom-move 0.4s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .game-table {
+    padding: 1px;
+  }
+}
+
+

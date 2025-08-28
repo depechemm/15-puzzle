@@ -1,0 +1,68 @@
+.burger-button {
+  position: relative;
+  padding: 0;
+  border: none;
+  background: transparent;
+  width: 3rem;
+  height: 2.5rem;
+}
+
+.burger-button::before,
+.burger-button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0.4rem;
+  background-color: var(--icons-color);
+  border-radius: var(--border-radius);
+}
+
+.burger-button::after {
+  bottom: 0;
+  /* transition: rotate 0.5s 0.1s ease, bottom 0.3s ease; */
+}
+
+.burger-button::before {
+  box-shadow: 0 1rem var(--icons-color);
+  /* transition: rotate 0.5s ease, top 0.3s ease; */
+  top: 0;
+}
+
+.burger-button.open::before {
+  rotate: 45deg;
+  box-shadow: 0 1rem rgba(0, 0, 0, 0);
+  /* transition: rotate 0.5s 0.1s ease; */
+  top: 1rem;
+}
+
+.burger-button.open::after {
+  top: 1rem;
+  rotate: -45deg;
+  box-shadow: none;
+  /* transition: rotate 0.5s 0.1s ease; */
+}
+
+.burger-menu__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0px;
+  position: absolute;
+  z-index: 10;
+  background-color: var(--element-background-color-light);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--border-color);
+}
+
+.burger-menu__options button {
+  border: none;
+  background-color: transparent;
+  color: var(--text-color-additional);
+  font-size: 1.5em;
+}
+
+.burger-menu__options li::marker {
+  content: "";
+}

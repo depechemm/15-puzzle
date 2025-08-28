@@ -1,0 +1,64 @@
+.mode-switcher {
+  display: flex;
+  border-radius: var(--border-radius);
+  background-color: var(--element-background-color-light);
+  border: 2px solid var(--border-color);
+  padding: 2px;
+}
+
+.mode-switcher__checkbox {
+  height: 0;
+  width: 0;
+}
+
+.mode-switcher__container {
+  display: flex;
+  position: relative;
+  gap: 5px;
+}
+
+.mode-switcher__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.icon {
+  fill: var(--icons-color);
+}
+
+.icon.no-active {
+  fill: var(--icons-color-no-active);
+}
+
+.mode-switcher__icon-wrapper svg {
+  height: 80%;
+  width: 80%;
+}
+
+.mode-switcher__container::after {
+  content: "";
+  position: absolute;
+  background-color: var(--element-background-color-medium);
+  border-radius: 50%;
+  transition: transform 0.4s ease-in-out;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.mode-switcher__container.open::after {
+  content: "";
+  position: absolute;
+  background-color: var(--element-background-color-medium);
+  border-radius: 50%;
+  transform-origin: 50% 50%;
+  transform: translateX(115%);
+  transition: transform 0.4s ease-in-out;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
